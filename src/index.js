@@ -9,3 +9,6 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+// used to be this, but got deprecated:
+// ReactDOM.render(<App />, document.getElementById('root));
