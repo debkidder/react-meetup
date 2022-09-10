@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import NewMeetupForm from "../components/meetups/NewMeetupForm";
 
 function NewMeetupPage() {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   function addMeetupHandler(meetupData) {
     fetch(
@@ -16,7 +16,8 @@ function NewMeetupPage() {
         },
       }
     ).then(() => {
-      history.replace("/");
+      // history.replace("/");
+      navigate("/", { replace: true });
     });
   }
 
